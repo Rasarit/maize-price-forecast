@@ -3,9 +3,9 @@
 ## Project Overview
 
 This project analyzes historical maize market price data using **time series analysis in R**.
-The objective is to understand **price trends, seasonal patterns, and forecast future maize prices**.
+The goal is to understand **price trends, seasonal patterns, and forecast future maize prices**.
 
-Agricultural commodity prices are influenced by seasonal harvest cycles, supply conditions, market demand, and external factors. This project demonstrates how **time series analysis and ARIMA forecasting** can be applied to agricultural market data.
+Agricultural commodity prices are influenced by seasonal harvest cycles, supply conditions, and market demand. This project demonstrates how **data visualization and ARIMA forecasting** can be used to analyze agricultural market price behavior.
 
 ---
 
@@ -18,7 +18,7 @@ The dataset contains historical maize price observations.
 | date   | Date of observation                |
 | price  | Maize market price (₹ per quintal) |
 
-The dataset contains **monthly observations for approximately five years**, allowing identification of long-term trends and seasonal price behavior.
+The dataset contains **monthly observations over approximately five years**, which allows identification of long-term trends and seasonal price behavior.
 
 ---
 
@@ -27,7 +27,7 @@ The dataset contains **monthly observations for approximately five years**, allo
 * **R**
 * **RStudio**
 * **ggplot2** – data visualization
-* **forecast package** – time series forecasting
+* **forecast** – time series forecasting
 
 ---
 
@@ -53,7 +53,8 @@ maize-price-forecast
 
 ![Maize Price Trend](maize_price_trend.svg)
 
-The historical maize price trend shows a **steady upward movement over time**, with noticeable fluctuations. These fluctuations may be associated with seasonal supply variations and market demand changes.
+This chart shows how maize prices changed over time.
+The trend indicates a **gradual increase in maize prices with some fluctuations**.
 
 ---
 
@@ -64,10 +65,10 @@ The historical maize price trend shows a **steady upward movement over time**, w
 Time series decomposition separates the data into:
 
 * **Trend** – long-term price movement
-* **Seasonal** – repeating patterns across months
+* **Seasonal** – repeating monthly patterns
 * **Random** – irregular fluctuations
 
-The decomposition confirms that maize prices exhibit **both trend and seasonal behavior**.
+The decomposition confirms that maize prices contain **both trend and seasonal behavior**.
 
 ---
 
@@ -77,7 +78,7 @@ The decomposition confirms that maize prices exhibit **both trend and seasonal b
 
 This chart shows the **average maize price for each month**.
 
-It indicates a **seasonal price pattern**, where prices tend to be relatively lower in the early months of the year and increase toward the later months.
+The plot indicates a **seasonal pattern**, where maize prices tend to increase toward the later months of the year compared to the earlier months.
 
 ---
 
@@ -87,15 +88,13 @@ It indicates a **seasonal price pattern**, where prices tend to be relatively lo
 
 ![ACF Plot](acf_plot.svg)
 
-The Autocorrelation Function (ACF) plot shows the relationship between current maize prices and their past values. Significant correlations at early lags indicate that past prices influence current price movements.
-
----
+The ACF plot shows the correlation between current maize prices and previous price values. This helps identify whether past prices influence future price movements.
 
 ### PACF Plot
 
 ![PACF Plot](pacf_plot.svg)
 
-The Partial Autocorrelation Function (PACF) plot helps identify the autoregressive components in the time series and supports the selection of an appropriate ARIMA model.
+The PACF plot helps identify the autoregressive structure in the time series and supports the use of an **ARIMA model** for forecasting.
 
 ---
 
@@ -103,9 +102,9 @@ The Partial Autocorrelation Function (PACF) plot helps identify the autoregressi
 
 ![Price Forecast](price_forecast.svg)
 
-An **ARIMA time series model** was used to forecast maize prices for the next 12 months.
+An **ARIMA model** was used to forecast maize prices for the next 12 months.
 
-The forecast suggests that maize prices are expected to **remain relatively stable with a gradual upward trend**, although uncertainty increases further into the forecast horizon.
+The forecast suggests that maize prices are likely to **remain relatively stable with moderate growth**, although uncertainty increases further into the forecast period.
 
 ---
 
@@ -115,20 +114,27 @@ The analysis followed these steps:
 
 1. Load and preprocess maize price data
 2. Visualize historical price trends
-3. Convert price data into a time series object
-4. Decompose the time series to identify trend and seasonal components
+3. Convert data into a time series format
+4. Perform seasonal decomposition
 5. Analyze autocorrelation using ACF and PACF plots
-6. Fit an ARIMA model
+6. Fit an ARIMA forecasting model
 7. Generate price forecasts for the next 12 months
 
 ---
 
 ## Key Insights
 
-* Maize prices show a **long-term upward trend**
-* A **seasonal pattern** exists in the data
-* Autocorrelation analysis indicates dependence on past prices
-* ARIMA forecasting suggests **moderate price growth in the coming months**
+### Insight 1 — Long-Term Price Trend
+
+Maize prices show a **gradual upward trend over the observed period**, indicating increasing market prices over time.
+
+### Insight 2 — Seasonal Price Pattern
+
+Average monthly prices indicate that maize prices tend to be **lower in early months and increase toward later months**, suggesting seasonal market behavior.
+
+### Insight 3 — Forecast Outlook
+
+The ARIMA forecast suggests that maize prices are expected to **remain relatively stable with moderate growth in the coming months**.
 
 ---
 
@@ -151,7 +157,7 @@ install.packages("forecast")
 maize_price_analysis.R
 ```
 
-The script will generate all plots used in this analysis.
+The script will generate all visualizations used in this analysis.
 
 ---
 
@@ -160,4 +166,4 @@ The script will generate all plots used in this analysis.
 **Kiran Jala**
 MBA Agribusiness Management
 
-Interest areas: **Agricultural market analysis, commodity price forecasting, and data analytics.**
+Interest areas: **Agricultural market analysis, commodity price forecasting, and data analytics**
