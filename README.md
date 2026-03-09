@@ -39,7 +39,7 @@ maize-price-forecast
 │
 ├── maize_price.csv
 ├── maize_price_analysis.R
-├── maize_price_trend.png
+├── maize_price_trend.svg
 ├── seasonal_decomposition.png
 ├── monthly_seasonality.png
 ├── price_forecast.png
@@ -50,7 +50,7 @@ maize-price-forecast
 
 ## 1. Price Trend
 
-![Maize Price Trend](maize_price_trend.png)
+![Maize Price Trend](maize_price_trend.svg)
 
 The historical maize price trend shows a **steady upward movement over time**, with noticeable fluctuations. These fluctuations may be associated with seasonal supply variations, market arrivals, and changes in demand.
 
